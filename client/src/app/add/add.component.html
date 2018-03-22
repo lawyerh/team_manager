@@ -1,0 +1,22 @@
+<input type="text" name="name" [(ngModel)]="name" placeholder="Player Name">
+<input type="text" name="position" [(ngModel)]="position" placeholder="Preferred Position">
+
+<div *ngIf="name.length == 0">
+    <h3>
+        Player name must be at least 2 characters long. A preferred position is optional and will default to "Undecided".
+    </h3>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="name.length > 1">
+    <button (click)="submit()">Submit Player</button>
+</div>

@@ -1,0 +1,25 @@
+*
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.name
+{
+    display: inline-block;
+}
+
+.position
+{
+    display: inline-block;
+}
+
+.delete
+{
+   background-color: firebrick;
+   border-radius: 15%;
+   color: white;
+   width: 10%;
+   font-size: 14px;
+   border: slategray 2px solid
+}
+

@@ -1,0 +1,25 @@
+<div *ngIf="allGames">
+  <button (click)="addGame()">Add Game</button>
+  <br>
+  <br>
+  <div *ngFor="let game of games">
+    <button class="games" (click)="expandGame(game._id)">Game: {{game.game.id | json}}</button>
+    <button (click)="delete(game._id)" class="x"> X </button>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div *ngIf="!allGames">
+  <h1>Game: {{gameView.game.id}}</h1>
+  <div *ngFor="let player of gameView.game.players">
+    <p>{{player.name}}</p>
+    <button [ngClass]="{'green': player.status == 2}" (click)="player.status = 2">Playing</button>
+    <button [ngClass]="{'red': player.status == 1}" (click)="player.status = 1">Not Playing</button>
+    <button [ngClass]="{'yellow': player.status == 0}" (click)="player.status = 0">Not Decided</button>
+    
+  </div>
+  <br>
+  <br>
+  <button (click)="saveGame(gameView._id)">Save and return to all games!</button>
+</div>
